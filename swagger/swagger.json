@@ -1,0 +1,98 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "RouteMatch API description",
+    "version": "1.0.0",
+    "title": "RouteMatch API",
+    "termsOfService": "",
+    "contact": {
+      "email": "info@routematch.com"
+    },
+    "license": {
+      "name": "NONE",
+      "url": ""
+    }
+  },
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "definitions": {
+    "PostVehicles": {
+      "type": "object",
+      "properties": {
+        "brand": {
+          "default": "LexCorp",
+          "type": "string"
+        },
+        "type": {
+          "default": "doomsday-device",
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "address": {
+          "default": "192.168.50.156",
+          "type": "string"
+        },
+        "friendlyName": {
+          "default": "dd-device",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "brand",
+        "type",
+        "model",
+        "address"
+      ]
+    }
+  },
+  "paths": {
+    "/cnrest/V1/vehicles/{id}": {
+      "get": {
+        "description": "returns managed vehicles within the system",
+        "tags": [
+          "vehicles"
+        ],
+        "parameters": [
+          {
+            "description": "Identificator",
+            "type": "string",
+            "in": "path",
+            "name": "id"
+          }
+        ]
+      }
+    },
+    "/cnrest/V1/vehicles": {
+      "get": {
+        "tags": [
+          "vehicles"
+        ],
+        "parameters": []
+      },
+      "post": {
+        "tags": [
+          "vehicles"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PostVehicles"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

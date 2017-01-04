@@ -4,7 +4,7 @@ Gateway is the consumer facing api. Its responsibility is to act as a proxy serv
 
 Current implemented middleware:
 
-Proxy: proxies requests to internal micro-services using config/routes.json configuration
+Proxy: proxies requests to internal micro-services using config/routes.json configuration and provides schema validation.
 
 ### Prerequisites
 

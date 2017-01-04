@@ -1,15 +1,20 @@
-# routematch
+# Gateway
 
-## dev environment dependencies
-* docker
-* docker-compose
+Gateway is the consumer facing api. Its responsibility is to act as a proxy service between the outside world and the internal micro-services. Behaviors are implemented as middleware.
 
-## quickstart
+Current implemented middleware:
 
-```bash
-./update_submodules.sh master # fetches submodules
+Proxy: proxies requests to internal micro-services using config/routes.json configuration
 
-./build.sh # installs npm modules, builds images
+### Prerequisites
 
-docker-compose up # starts up services in docker containers
-```
+* node
+* npm
+
+### Install
+
+`npm install` in the application root
+
+### Run
+
+`npm start` in the application root

@@ -20,7 +20,7 @@
     "joi": "^10.0.5",
     "joi-to-json-schema": "^2.3.0",
     "lodash": "^4.17.2",
-    "rm-node-ms": "file:../../../rm-node-ms",
+    "rm-node-ms": "git@github.com:tbparrish/rm-node-ms.git",
     "seneca": "^3.2.2",
     "swagger-express": "^1.0.5",
     "url": "^0.11.0"
